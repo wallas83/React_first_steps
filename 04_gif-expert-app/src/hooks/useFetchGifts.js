@@ -6,10 +6,12 @@ export const useFetchGifts = (category) => {
 
 
      const [images, setImages] = useState([]);
+     const [isLoading, setIsLoading] = useState(true);
 
     const getImages = async () => {
         const newImages = await getGifs(category);
         setImages(newImages);
+        setIsLoading(false);
     }
     // es lo mismo que arriba pero usando .then
     //    useEffect(() => {
@@ -24,6 +26,6 @@ export const useFetchGifts = (category) => {
 
     return {
         images: images,
-        isLoading: true
+        isLoading: isLoading
     }
 }
