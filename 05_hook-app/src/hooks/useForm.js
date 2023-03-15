@@ -8,7 +8,8 @@ export const useForm = (initialForm = {}) => {
      
     
       const onInputChange = ({ target }) => {
-        console.log(target.name);
+        // console.log('NOMBREEEEE');
+        // console.log(target.name);
         const { name, value } = target;
         setformState({
           ...formState,

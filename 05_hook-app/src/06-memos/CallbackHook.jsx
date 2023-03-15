@@ -5,10 +5,11 @@ import { ShowIncrement } from "./ShowIncrement"
 export const CallbackHook = () => {
     const [counter, setCounter] = useState(10);
     const incrementFather = useCallback(
-        () => {
-            //value es el valor actual de counter, de esa forma solo se actualiza el valor 
+        (value) => {
+            // el value es el argumento de incrementar en showIncrement 
+            //c es el valor actual de counter, de esa forma solo se actualiza el valor 
             //ya que counter esta en memorizado tambien 
-            setCounter( (value) => value + 1);
+            setCounter( (c) => c + value);
         },
         [],
     )
