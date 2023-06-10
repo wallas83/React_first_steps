@@ -1,0 +1,9 @@
+.maincito{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  gap: 12px;
+  font-family: system-ui;
+  max-height: 800px;
+}
